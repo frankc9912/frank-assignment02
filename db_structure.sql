@@ -31,6 +31,8 @@ running the following command from the command line:
 */
 
 -- Add a column to the septa.bus_stops table to store the geometry of each stop.
+CREATE EXTENSION IF NOT EXISTS postgis;
+
 alter table septa.bus_stops
 add column if not exists geog geography;
 
